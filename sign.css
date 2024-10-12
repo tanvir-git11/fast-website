@@ -24,13 +24,13 @@ body{
     transition: 1s;
 }
 .backgroubd:hover{
-    box-shadow: 0 0 50px aqua;
-    animation: animate 1s linear infinite;
-    transition: 1s;
+    box-shadow: 0 0 50px rgb(255, 106, 0);
+    /* animation: animate 2s linear infinite; */
+   
 }
 @keyframes animate{
     100%{
-        box-shadow: 0 0 50px rgb(0, 255, 145); 
+        box-shadow: 0 0 50px rgb(255, 106, 0); 
     }
 }
 
@@ -42,15 +42,15 @@ body{
     width: 100%;
 }
 h2{
-    color: white;
+    color: rgb(247, 136, 1);
     text-align: center;
     font-size: 30px;
+    text-shadow: 0 0 50px rgb(255, 106, 0); ; 
 }
 .input-group{
     position: relative;
     margin: 30px 0;
     border-bottom: 2px solid #fff;
-
 }
 .input-group label{
     position: absolute;
@@ -88,15 +88,15 @@ h2{
 
 }
 .remember label input{
-    accent-color: aqua;
+    accent-color: rgb(255, 132, 0);
 
 }
 button{
     position: relative;
     width: 100%;
     height: 40px;
-    background: aqua;
-    box-shadow: 0 0 10px aqua;
+    background: rgb(255, 149, 0);
+    box-shadow: 0 0 10px rgb(255, 204, 0);
     
     font-size: 16px;
     color: #000;
@@ -107,8 +107,8 @@ button{
     outline: none;
 }
 button:hover{
-    background-color: rgb(0, 255, 195);
-    box-shadow: 0 0 10px rgb(0, 255, 170);
+    background-color: rgb(255, 115, 0);
+    box-shadow: 0 0 10px rgb(255, 136, 0);
 }
 
 .sigin-link{
@@ -122,11 +122,32 @@ button:hover{
 }
 
 .sigin-link p a{
-    color: aqua;
+    color: rgb(255, 140, 0);
     margin-left: 5px;
     text-decoration: none;
     font-weight: 500;
 }
 .sigin-link p a:hover{
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .backgroubd{
+        width: 300px;
+        height: 400px;
+    }
+    h2{
+        font-size: 30px;
+        
+    }
+    .input-group{
+        margin: 20px 0;
+    }
+    .input-group label{
+        font-size: 15px;
+    }
+    .input-group input{
+        width: 250px;
+        height: 40px;
+    }
 }

@@ -1,79 +1,219 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
-.hero{
-    width: 100%;
-    height: 100vh;
-    background-image: url(img/background.png);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    /* max-width: 100%;
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.743) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.691) 80%,
+      rgba(0, 0, 0, 0.93) 100%
+    ),
+    /* উপরে ও নিচে হালকা কালো গ্রেডিয়েন্ট */;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  /* max-width: 100%;
     max-height: 100%; */
 }
-.logo{
-    width: 100px;
-    cursor: pointer;
-    
-
+.logo {
+  width: 100px;
+  cursor: pointer;
 }
-.navbar{
-    width: 85%;
-    height: 15%;
-    margin: auto;
+.navbar {
+  width: 85%;
+  height: 15%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+button a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+button {
+  width: 200px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 20px 10px;
+  color: #ffffff;
+  padding: 15px 0;
+  background: transparent;
+  border: 2px solid rgb(253, 174, 4);
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+span {
+  background-color: #ff7811;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+button:hover span {
+  width: 100%;
+}
+
+button:hover {
+  border: none;
+}
+.content {
+  color: #fbfcfb;
+  position: absolute;
+  top: 60%;
+  left: 6%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+h1 {
+  font-size: 60px;
+  margin: 10px 0 30px;
+  line-height: 60px;
+  text-shadow: 6px 6px 20px rgba(0, 0, 0, 0.95);
+}
+
+.side-bar {
+  width: 50px;
+  height: 100vh;
+  background: linear-gradient(#2e010100, #2e0a015a);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.menu {
+  display: block;
+  width: 25px;
+  margin: 40px 0 auto;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.menu:hover {
+  width: 40px;
+  margin-left: 0;
+}
+.social-link img,
+.useful-link img {
+  width: 25px;
+  margin: 5px auto;
+  cursor: pointer;
+}
+.useful-link img:hover {
+  width: 50px;
+}
+.social-link img:hover {
+  width: 50px;
+}
+
+.social-link {
+  width: 50px;
+  text-align: center;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.useful-link {
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+}
+
+small {
+  font-size: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* মোবাইল স্ক্রিনের জন্য মিডিয়া কুয়েরি */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+  .side-bar {
+    width: 100%;
+    height: 50px;
+    top: auto;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-button{
-    color: #fbfcfb;
-    padding: 10px 25px;
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: width 1s, height 1s;
-    
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
 
+  .social-link {
+    width: auto;
+    position: unset;
+    transform: none;
+  }
 
-}
-
-button:hover{
-    /* width: 200px;
-    height: 50px; */
-    font-size: 20px;
-    border-color: aqua;
-}
-.content{
-    color: #fbfcfb;
-    position: absolute;
-    top: 50%;
-    left: 8%;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-h1{
-    font-size: 50px;
-    margin: 10px 0 30px;
-    line-height: 50px;
-}
-
-.side-bar{
-    width: 50px;
-    height: 100vh;
-    background: linear-gradient(#00545d, #000729);
-    position: absolute;
-    right: 0;
-    top: 0;
-    
-}
-.menu{
-    display: block;
+  .useful-link {
+    width: auto;
+    position: unset;
+  }
+  .menu {
     width: 25px;
-    margin:40px 0 auto;
-    cursor: pointer;
-    margin-left: 15px;
+    margin: 0;
+  }
+  .menu:hover {
+    width: 30px;
+  }
+  .useful-link img:hover {
+    width: 40px;
+  }
+  .social-link img:hover {
+    width: 40px;
+  }
+  .content {
+    top: 50%;
+  }
+  button {
+    width: 100px;
+    font-weight: 500;
+    font-size: 10px;
+    margin: 10px 5px;
+    padding: 10px;
+  }
+  button a {
+    font-size: 15px;
+    font-weight: 500;
+  }
 }
